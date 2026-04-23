@@ -6,7 +6,7 @@
   <title>SparkLabs One</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg:        #0e0f0c;
@@ -45,38 +45,10 @@
       margin-bottom: 3rem;
     }
 
-    .logo-area {
-      width: 96px;
-      height: 96px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: var(--surface);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
-      font-size: 0.65rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
     .brand {
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .brand-name {
-      font-family: 'Fraunces', serif;
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--heading);
-      letter-spacing: -0.02em;
-      line-height: 1;
-    }
-
-    .brand-name span {
-      color: var(--accent);
+      gap: 0.5rem;
     }
 
     .tagline {
@@ -260,9 +232,16 @@
 <body>
 
   <header>
-    <div class="logo-area">logo</div>
     <div class="brand">
-      <div class="brand-name">SparkLabs<span> One</span></div>
+      <svg width="220" height="90" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SparkLabs One">
+        <!-- Vertical bars -->
+        <rect x="0" y="0"  width="10" height="44" rx="1.5" fill="#c8e06a"/>
+        <rect x="0" y="52" width="10" height="32" rx="1.5" fill="#c8e06a" opacity="0.55"/>
+        <rect x="0" y="90" width="10" height="20" rx="1.5" fill="#c8e06a" opacity="0.25"/>
+        <!-- Stacked wordmark -->
+        <text x="24" y="40" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="600" fill="#eef2e4" letter-spacing="-0.5">SparkLabs</text>
+        <text x="24" y="78" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="300" fill="#c8e06a" letter-spacing="-0.5">One</text>
+      </svg>
       <div class="tagline">Complex problems, solved right.</div>
       <nav class="nav">
         <a href="#about">About</a>
