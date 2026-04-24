@@ -46,8 +46,30 @@
     }
 
     .brand {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 1.25rem;
+      row-gap: 1rem;
+      align-items: stretch;
+    }
+
+    .brand-photo {
+      grid-column: 1;
+      grid-row: 1;
+      height: 120px;
+      width: auto;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+      align-self: center;
+    }
+
+    .brand-text {
+      grid-column: 2;
+      grid-row: 1;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       gap: 0.5rem;
     }
 
@@ -59,6 +81,8 @@
     }
 
     .nav {
+      grid-column: 1 / -1;
+      grid-row: 2;
       display: flex;
       gap: 1.5rem;
       flex-wrap: wrap;
@@ -233,16 +257,19 @@
 
   <header>
     <div class="brand">
-      <svg width="220" height="90" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SparkLabs One">
-        <!-- Vertical bars -->
-        <rect x="0" y="0"  width="10" height="44" rx="1.5" fill="#c8e06a"/>
-        <rect x="0" y="52" width="10" height="32" rx="1.5" fill="#c8e06a" opacity="0.55"/>
-        <rect x="0" y="90" width="10" height="20" rx="1.5" fill="#c8e06a" opacity="0.25"/>
-        <!-- Stacked wordmark -->
-        <text x="24" y="40" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="600" fill="#eef2e4" letter-spacing="-0.5">SparkLabs</text>
-        <text x="24" y="78" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="300" fill="#c8e06a" letter-spacing="-0.5">One</text>
-      </svg>
-      <div class="tagline">Complex problems, solved right.</div>
+      <img class="brand-photo" src="photo.jpg" alt="Portrait" />
+      <div class="brand-text">
+        <svg width="220" height="90" viewBox="0 0 220 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="SparkLabs One">
+          <!-- Vertical bars -->
+          <rect x="0" y="0"  width="10" height="44" rx="1.5" fill="#c8e06a"/>
+          <rect x="0" y="52" width="10" height="32" rx="1.5" fill="#c8e06a" opacity="0.55"/>
+          <rect x="0" y="90" width="10" height="20" rx="1.5" fill="#c8e06a" opacity="0.25"/>
+          <!-- Stacked wordmark -->
+          <text x="24" y="40" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="600" fill="#eef2e4" letter-spacing="-0.5">SparkLabs</text>
+          <text x="24" y="78" font-family="'Space Grotesk', sans-serif" font-size="32" font-weight="300" fill="#c8e06a" letter-spacing="-0.5">One</text>
+        </svg>
+        <div class="tagline">Complex problems, solved right.</div>
+      </div>
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#services">Services</a>
